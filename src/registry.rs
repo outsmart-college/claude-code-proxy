@@ -52,6 +52,8 @@ pub(crate) const CODEX_MODELS: &[&str] = &[
     "gpt-6-luna",
     "gpt-6-sol",
     "gpt-6.1-sol",
+    "gpt-6.2-astra",
+    "gpt-6.2-sol",
 ];
 
 pub(crate) const KIMI_MODELS: &[&str] = &["kimi-for-coding", "kimi-k2.6", "kimi-k3", "k2.6", "k3"];
@@ -431,6 +433,10 @@ mod tests {
             "gpt-6-luna",
             "gpt-6.1-sol",
             "gpt-6.1-sol-fast",
+            "gpt-6.2-astra",
+            "gpt-6.2-astra-fast",
+            "gpt-6.2-sol",
+            "gpt-6.2-sol-fast",
         ] {
             assert_eq!(
                 registry.provider_for_model(model, None).unwrap().name(),
